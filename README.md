@@ -167,9 +167,9 @@ export OPENAI_API_KEY="sk-..."
 
 | File | When to use |
 |------|-------------|
-| `environment.yaml` + `requirements.txt` | Recommended. Loose version bounds, works on most CUDA versions. |
-| `env.txt` | Paper-level reproduction. Pinned to the exact packages used in our experiments (Ubuntu 20.04, CUDA 11.8, Python 3.10). |
-| `now_environment.yaml` | Conda environment snapshot for the current working setup. |
+| `environment.yml` + `requirements.txt` | **Recommended.** Loose version bounds, works across different CUDA versions. |
+| `requirements-lock.txt` | **Paper-level reproduction.** Pinned to the exact wheels used in our experiments (Ubuntu 20.04, CUDA 11.8, Python 3.10). |
+| `requirements-dev.txt` | **Development only.** Adds Jupyter, black, yapf on top of `requirements.txt`. |
 
 ---
 

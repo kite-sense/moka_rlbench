@@ -1,6 +1,7 @@
 # Output and logging
 outputs
 logs
+logs.txt
 ckpts
 data
 temp

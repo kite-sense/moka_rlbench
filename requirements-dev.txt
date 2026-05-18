@@ -1,0 +1,17 @@
+# =============================================================================
+# moka-rlbench — optional development / notebook dependencies
+# Install with:  pip install -r requirements-dev.txt
+# =============================================================================
+
+-r requirements.txt
+
+# Notebooks
+jupyter>=1.0
+jupyterlab>=4.0
+ipykernel>=6.20
+ipywidgets>=8.0
+notebook>=7.0
+
+# Formatting / linting
+black>=24.0
+yapf>=0.40

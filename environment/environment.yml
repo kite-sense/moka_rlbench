@@ -1,0 +1,6 @@
+name: moka
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+prefix: /path/to/anaconda3/envs/moka

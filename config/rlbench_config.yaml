@@ -1,0 +1,39 @@
+# RLBench专用配置
+camera:
+  planner:
+    serial_number: "front_camera"
+    view: "front"
+    crop: [0, 0, 128, 128]
+  wrist:
+    serial_number: "wrist_camera"
+    view: "wrist"
+    crop: [0, 0, 128, 128]
+  primary:
+    serial_number: "left_shoulder_camera"
+    view: "left_shoulder"
+    crop: [0, 0, 128, 128]
+  secondary:
+    serial_number: "right_shoulder_camera"
+    view: "right_shoulder"
+    crop: [0, 0, 128, 128]
+  depth:
+    average_across_n_frames: 1
+    grad_gaussian_sigma: 1.0
+
+motion:
+  safe_z: 1.2
+  min_z: 0.1
+  grasp_z_offset: 0.05
+  release_z_offset: 0.1
+  gripper_xy_offset: [0, 0]
+  high_vel: 0.1
+  low_vel: 0.02
+  max_angvel: 0.5
+  grip_timeout: 20
+  grip_open_thresh: 0.1
+  grip_close_thresh: 0.9
+  target_pos_thresh: 0.01
+
+max_subtask_steps: 50
+max_subtasks: 5
+max_tasks: 10

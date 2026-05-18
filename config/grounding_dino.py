@@ -42,4 +42,4 @@ fusion_dropout = 0.0
 fusion_droppath = 0.1
 sub_sentence_present = True
 
-bert_base_uncased_path = "/path/to/huggingface/hub/models--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594"
+bert_base_uncased_path = "bert-base-uncased"

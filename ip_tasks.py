@@ -10,6 +10,7 @@ TODO:
 # 这里通过 getattr 动态获取类，找不到时赋值为 None。
 from rlbench import tasks as rl_tasks
 from pathlib import Path
+import os
 
 
 TASK_NAMES = {}
@@ -118,7 +119,11 @@ def dump_sample_as_json(path: str):
 
     pr = PyRep()
     # 指定 RLBench 的主场景文件（相对仓库根目录）
-    pr.launch('/path/to/git_repos/RLBench/rlbench/task_design.ttt', headless=True, responsive_ui=True)
+    task_design_path = os.environ.get(
+        'RLBENCH_TASK_DESIGN_TTT',
+        os.path.join(os.path.dirname(__file__), '..', 'rlbench', 'task_design.ttt')
+    )
+    pr.launch(task_design_path, headless=True, responsive_ui=True)
     pr.start()
     # 创建 Robot 包装器
     robot = Robot(Panda(), PandaGripper())

@@ -15,7 +15,11 @@ import yaml
 from PIL import Image
 from easydict import EasyDict as edict
 
-os.environ['OPENAI_API_KEY'] = "REDACTED_API_KEY" # put your key here
+if 'OPENAI_API_KEY' not in os.environ:
+    raise RuntimeError(
+        'OPENAI_API_KEY environment variable is not set. '
+        'Export it before running: export OPENAI_API_KEY="sk-..."'
+    )
 
 
 

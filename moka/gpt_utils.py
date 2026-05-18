@@ -3,14 +3,11 @@ import base64
 import requests
 from io import BytesIO
 
+api_key = os.environ['OPENAI_API_KEY']
+OPENAI_API_BASE = os.environ.get(
+    'OPENAI_API_BASE', 'https://api.openai.com/v1/chat/completions'
+)
 
-# Get OpenAI API Key from environment variable
-# api_key = os.environ['OPENAI_API_KEY']
-# api_key = "REDACTED_API_KEY"
-# api_key = "REDACTED_API_KEY"
-api_key = "REDACTED_API_KEY"
-
-# TODO(kuanfang): Maybe also support free form-responses.
 headers = {
     'Content-Type': 'application/json',
     'Authorization': f'Bearer {api_key}'
@@ -95,7 +92,7 @@ def request_gpt(message,
     # messages in the inputs.
 
     if model_name is None:
-        if images is [] or images is None:
+        if not images:
             model_name = DEFAULT_LLM_MODEL_NAME
         else:
             model_name = DEFAULT_VLM_MODEL_NAME
@@ -107,8 +104,7 @@ def request_gpt(message,
                              local_image=local_image)
 
     response = requests.post(
-        # 'https://api.openai.com/v1/chat/completions',
-        'https://api.openai.com/v1/chat/completions',
+        OPENAI_API_BASE,
         headers=headers,
         json=payload)
 
@@ -217,7 +213,7 @@ def request_gpt_incontext(
     # messages in the inputs.
 
     if model_name is None:
-        if images is [] or images is None:
+        if not images:
             model_name = DEFAULT_LLM_MODEL_NAME
         else:
             model_name = DEFAULT_VLM_MODEL_NAME
@@ -232,8 +228,7 @@ def request_gpt_incontext(
         example_responses=example_responses)
 
     response = requests.post(
-        # 'https://api.openai.com/v1/chat/completions',
-        'https://api.openai.com/v1/chat/completions',
+        OPENAI_API_BASE,
         headers=headers,
         json=payload)
 

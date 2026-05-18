@@ -36,9 +36,11 @@ from absl import app, flags, logging  # NOQA
 
 # get the openai environment key
 # import openai  # NOQA
-# api_key = os.getenv("OPENAI_API_KEY")
-api_key = "REDACTED_API_KEY"
-# openai.api_key = api_key
+if 'OPENAI_API_KEY' not in os.environ:
+    raise RuntimeError(
+        'OPENAI_API_KEY environment variable is not set. '
+        'Export it before running: export OPENAI_API_KEY="sk-..."'
+    )
 
 # import matplotlib
 # matplotlib.use('Agg')

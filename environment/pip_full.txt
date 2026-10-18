@@ -50,7 +50,7 @@ google-auth==2.40.3
 google-auth-oauthlib==0.4.6
 google-pasta==0.2.0
 # Editable install with no version control (groundingdino==0.1.0)
--e /path/to/instant-policy/third_party/moka/Grounded-Segment-Anything/GroundingDINO
+-e ./Grounded-Segment-Anything/GroundingDINO
 groundingdino-py==0.4.0
 grpcio==1.75.1
 gymnasium==1.2.1
@@ -157,7 +157,7 @@ pydantic_core==2.33.2
 Pygments==2.19.2
 pyparsing==3.2.5
 pyquaternion==0.9.9
-PyRep @ file:///path/to/PyRep
+PyRep @ git+https://github.com/stepjam/PyRep.git
 python-dateutil==2.9.0.post0
 python-dotenv==1.1.1
 python-json-logger==3.3.0

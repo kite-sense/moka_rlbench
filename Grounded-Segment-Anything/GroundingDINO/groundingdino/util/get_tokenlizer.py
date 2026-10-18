@@ -22,10 +22,6 @@ def get_tokenlizer(text_encoder_type, bert_base_uncased_path):
     print("final text_encoder_type: {}".format(text_encoder_type), flush=True)
 
     tokenizer = AutoTokenizer.from_pretrained(text_encoder_type)
-    # tokenizer = AutoTokenizer.from_pretrained(
-    #     "/path/to/huggingface/hub/models--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594",
-    #     local_files_only=True
-    # )
     return tokenizer
 
 

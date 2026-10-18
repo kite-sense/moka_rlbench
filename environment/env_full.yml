@@ -260,4 +260,3 @@ dependencies:
       - yacs==0.1.8
       - yapf==0.43.0
       - zipp==3.23.0
-prefix: /path/to/anaconda3/envs/moka

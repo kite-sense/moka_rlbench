@@ -84,8 +84,8 @@ The full stack has four pieces. Install them in this order:
 ### 1. Clone and create the environment
 
 ```bash
-git clone https://github.com/kite-sense/moka-rlbench.git
-cd moka-rlbench
+git clone https://github.com/kite-sense/moka_rlbench.git
+cd moka_rlbench
 
 conda create -n moka python=3.10
 conda activate moka
@@ -260,7 +260,7 @@ For the full analysis of MOKA's failure modes (2D → 3D back-projection error, 
 ## Repository layout
 
 ```
-moka-rlbench/
+moka_rlbench/
 ├── moka/                          # Core MOKA module
 │   ├── drivers/                   # Robot/simulator drivers (driver.py, new_driver.py)
 │   ├── planners/                  # Visual-prompt planner + utils
@@ -313,7 +313,7 @@ If you reference *this port specifically*, please also link back to the reposito
   title        = {moka-rlbench: An unofficial RLBench port of MOKA},
   author       = {Wang, Yongzhong},
   year         = {2025},
-  howpublished = {\url{https://github.com/kite-sense/moka-rlbench}}
+  howpublished = {\url{https://github.com/kite-sense/moka_rlbench}}
 }
 ```
 
